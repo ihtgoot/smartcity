@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /> 
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Integrated Command and Control Centre (ICCC)</title>
+<!-- Bootstrap core CSS -->
+<link href="https://iccc.smartcities.gov.in/assets/frontend/css/bootstrap.css" rel="stylesheet">
+<!-- Slick Slider CSS -->
+<link href="https://iccc.smartcities.gov.in/assets/frontend/css/slick-theme.css" rel="stylesheet"/>
+<!-- ICONS CSS -->
+<link href="https://iccc.smartcities.gov.in/assets/frontend/css/font-awesome.css" rel="stylesheet">
+<!-- ICONS CSS -->
+<link href="https://iccc.smartcities.gov.in/assets/frontend/css/animation.css" rel="stylesheet">
+<!-- Pretty Photo CSS -->
+<link href="https://iccc.smartcities.gov.in/assets/frontend/css/prettyPhoto.css" rel="stylesheet">
+<!-- Custom Main StyleSheet CSS -->
+<link href="https://iccc.smartcities.gov.in/assets/frontend/css/component.css" rel="stylesheet">
+<!-- Pretty Photo CSS -->
+<link href="https://iccc.smartcities.gov.in/assets/frontend/css/jquery.bxslider.css" rel="stylesheet">
+<!-- Pretty Photo CSS -->
+<link href="https://iccc.smartcities.gov.in/assets/frontend/css/style5.css" rel="stylesheet">
+<!-- Pretty Photo CSS -->
+<link href="https://iccc.smartcities.gov.in/assets/frontend/css/demo.css" rel="stylesheet">
+<!-- Pretty Photo CSS -->
+<link href="https://iccc.smartcities.gov.in/assets/frontend/css/fig-hover.css" rel="stylesheet">
+<!-- Typography CSS -->
+<link href="https://iccc.smartcities.gov.in/assets/frontend/css/typography.css" rel="stylesheet">
+<!-- Custom Main StyleSheet CSS -->
+<link href="https://iccc.smartcities.gov.in/assets/frontend/style.css" rel="stylesheet">
+<!-- Custom Main StyleSheet CSS -->
+<link href="https://iccc.smartcities.gov.in/assets/frontend/css/component.css" rel="stylesheet">
+
+<!-- Custom Main StyleSheet CSS -->
+<link href="https://iccc.smartcities.gov.in/assets/frontend/css/sidebar-widget.css" rel="stylesheet">
+<!-- Custom Main StyleSheet CSS -->
+<link href="https://iccc.smartcities.gov.in/assets/frontend/css/shotcode.css" rel="stylesheet">
+<!-- Custom Main StyleSheet CSS -->
+<link href="https://iccc.smartcities.gov.in/assets/frontend/svg-icon.css" rel="stylesheet">
+<!-- Color CSS -->
+<link href="https://iccc.smartcities.gov.in/assets/frontend/css/color.css" rel="stylesheet">
+<!-- Responsive CSS -->
+<link href="https://iccc.smartcities.gov.in/assets/frontend/css/responsive.css" rel="stylesheet">
+<script src="https://iccc.smartcities.gov.in/assets/frontend/js/mapdata.js"></script>
+<script src="https://iccc.smartcities.gov.in/assets/frontend/js/countrymap.js"></script>
+<link rel="stylesheet" href="https://iccc.smartcities.gov.in/assets/frontend/css/base2659.css?v=b2f8f"> 
+
+</head>
+<body class="demo-5">
+
+<!------Onload Slider------>
+<script type="text/javascript" src=" https://iccc.smartcities.gov.in/assets/frontend/js/jquery-1.8.2.js"></script>
+<style type="text/css">
+#overlay {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: #000;
+filter:alpha(opacity=70);
+-moz-opacity:0.7;
+-khtml-opacity: 0.7;
+opacity: 0.7;
+z-index: 100;
+display: none;
+} 
+.popup{
+width: 100%;
+margin: 0 auto;
+display: none;
+position: fixed;
+z-index: 9999;
+}
+.cnt223{
+min-width: 100%;
+width: 100%;
+min-height: 150px;
+margin: 15px auto;
+background: #f3f3f3;
+position: relative;
+z-index: 103;
+padding: 15px;
+
+border-radius: 5px;
+box-shadow: 0 2px 5px #000;
+}
+.cnt223 {
+text-align: center;
+}
+.cnt223 a {
+    text-decoration: none;
+    float: none;
+    opacity: 1;
+}
+.cnt223 p a{
+color: #d91900;
+font-weight: bold;
+text-align: center;
+}
+.cnt223 .x{
+float: right;
+height: 35px;
+left: 22px;
+position: relative;
+top: -25px;
+width: 34px;
+}
+.cnt223 .x:hover{
+cursor: pointer;
+}
+.close-btn{
+    text-decoration: none;
+    color: #fff;
+    background: #a69572;
+    padding: 10px 30px;
+    line-height: 1;
+    border-radius: 41px;
+    margin-top: 20px;
+}
+.org-swachh {
+    width: 81%;
+    margin-top: 15px;
+}
+</style>
+<script type='text/javascript'>
+$(function(){
+var overlay = $('<div id="overlay"></div>');
+overlay.show();
+overlay.appendTo(document.body);
+$('.popup').show();
+$('.close').click(function(){
+$('.popup').hide();
+overlay.appendTo(document.body).remove();
+return false;
+});
+
+
+ 
+
+$('.x').click(function(){
+$('.popup').hide();
+overlay.appendTo(document.body).remove();
+return false;
+});
+});
+</script>
+<div class='popup'>
+<div class='cnt223'>
+ 
+
+<div class="slideshow-container">
+
+<div class="mySlides  "> 
+  <img src="https://iccc.smartcities.gov.in/assets/frontend/images/har-ghar-tiranga.jpg" style="width:100%;margin-bottom: 20px;">
+   
+</div>
+ 
+
+</div>
+ 
+ 
+<a href='' class='close close-btn'>Skip to Main Content</a>
+
+</div>
+</div>
+
+ 
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+
+<!-- On Load Slider-->
+
+<!-- AJAX -->
+  <script src="https://iccc.smartcities.gov.in/assets/frontend/flip/js/jquery.js"></script> 
+  <!-- costume css -->
+  <link rel="stylesheet" type="text/css" href="https://iccc.smartcities.gov.in/assets/frontend/flip/flipbook.style.css"> 
+  <!-- Bootstrap Css -->
+   
+
+  <!-- Include JS -->
+  <script src="https://iccc.smartcities.gov.in/assets/frontend/flip/js/flipbook.min.js"></script>
+
+  <script type="text/javascript">
+
+      $(document).ready(function () {
+          $(".read").flipBook({
+            //Layout Setting
+            pdfUrl:'https://iccc.smartcities.gov.in/assets/frontend/flip/pdf/IMAF2.0.pdf',
+            lightBox:true,
+            layout:3,
+            currentPage:{vAlign:"bottom", hAlign:"left"},
+            // BTN SETTING
+            btnShare : {enabled:false},
+			btnBookmark : {enabled:false},
+            btnPrint : {
+              hideOnMobile:true
+            },
+            btnDownloadPages : {
+              enabled: true,
+              title: "Download pages",
+              icon: "fa-download",
+              icon2: "file_download",
+              url: "https://iccc.smartcities.gov.in/assets/frontend/flip/pdf/IMAF2.0.pdf",
+              name: "allPages.zip",
+              hideOnMobile:false
+            },
+            btnColor:'#30365a',
+            sideBtnColor:'#30365a',
+            sideBtnSize:60,
+            sideBtnBackground:"rgba(0,0,0,.7)",
+            sideBtnRadius:60,
+            btnSound:{vAlign:"top", hAlign:"left"},
+            btnAutoplay:{vAlign:"top", hAlign:"left"}
+             
+            
+        });
+      })
+  </script>
+ 
+ <script type="text/javascript">
+
+      $(document).ready(function () {
+          $(".read2").flipBook({
+            //Layout Setting
+            pdfUrl:'https://iccc.smartcities.gov.in/assets/frontend/extra-images/IMAF-ICCC-Maturity-Assessment-Framework.pdf',
+            lightBox:true,
+            layout:3,
+            currentPage:{vAlign:"bottom", hAlign:"left"},
+            // BTN SETTING
+            btnShare : {enabled:false},
+			btnBookmark : {enabled:false},
+            btnPrint : {
+              hideOnMobile:true
+            },
+            btnDownloadPages : {
+              enabled: true,
+              title: "Download pages",
+              icon: "fa-download",
+              icon2: "file_download",
+              url: "https://iccc.smartcities.gov.in/assets/frontend/extra-images/IMAF-ICCC-Maturity-Assessment-Framework.pdf",
+              name: "allPages.zip",
+              hideOnMobile:false
+            },
+            btnColor:'#30365a',
+            sideBtnColor:'#30365a',
+            sideBtnSize:60,
+            sideBtnBackground:"rgba(0,0,0,.7)",
+            sideBtnRadius:60,
+            btnSound:{vAlign:"top", hAlign:"left"},
+            btnAutoplay:{vAlign:"top", hAlign:"left"}
+             
+            
+        });
+      })
+  </script>
+ 
+
+
+
+<!--WRAPPER START--> 
+<div class="wrapper"> 
+ <header>
+        <!--CITY TOP WRAP START-->
+           <div class="navbar-area">
+		 <div class="plamb-responsive-nav">
+		            <div class="container">
+		                <div class="plamb-responsive-menu">
+		                    <div class="logo">
+		                        <a href="https://iccc.smartcities.gov.in/">
+		                            <img src="https://iccc.smartcities.gov.in/assets/frontend/extra-images/top-logo2.png" width="100%" class="white-logo" alt="logo"> 
+		                        </a>
+		                    </div>
+		                </div>
+		            </div>
+		        </div>
+      
+        <div class="plamb-nav">
+            <div class="container">
+
+                <nav class="  navbar-expand-md  ">
+                   <div class="row">
+                    <div class="col-md-2 text-left"><img class="org-logo org-scm" src="https://iccc.smartcities.gov.in/assets/frontend/extra-images/smart.svg" alt=""></div>
+                    <div class="col-md-2 text-center"><img class="org-logo org-akam" src="https://iccc.smartcities.gov.in/assets/frontend/extra-images/akam.svg" alt=""></div>
+                    <div class="col-md-4 text-center"><img class="org-logo org-mohua" src="https://iccc.smartcities.gov.in/assets/frontend/extra-images/mohua.svg" alt=""></div>
+                    <div class="col-md-2 text-center"><img class="org-logo org-aatam" src="https://iccc.smartcities.gov.in/assets/frontend/extra-images/aatm.svg" alt=""></div>
+                    <div class="col-md-2 text-right"><img class="org-logo org-swachh" src="https://iccc.smartcities.gov.in/assets/frontend/extra-images/g20-logo.png" alt=""></div>
+                </div>
+                     
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <!--CITY TOP NAVIGATION START-->
+				<div class="city_top_navigation">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="navigation">
+									<ul>
+										<li><a href="https://iccc.smartcities.gov.in/"><i class="fa fa-home" style="font-size:20px;"> </i></a></li>
+										<!--	<li><a href="#">Use Cases </a>
+											<ul class="child">
+												<li><a href="https://iccc.smartcities.gov.in/iccc/cities">By City </a></li>
+												<li><a href="https://iccc.smartcities.gov.in/index.php#sectors">By Sector </a></li> 
+											</ul>
+										</li>-->
+										 
+										<li><a href="https://iccc.smartcities.gov.in/iccc/cities">Cities </a></li>
+										<li><a href="https://iccc.smartcities.gov.in/index.php#sectors">Sectors </a></li>
+										<li><a href="https://iccc.smartcities.gov.in/imaf"  >IMAF</a></li>
+
+										<li><a href="#">Resources</a>
+											<ul class="child">
+												<li><a href="https://smartnet.niua.org/iccc/ict.php" target="_blank">Model RFP </a></li>
+												<li><a href="https://smartnet.niua.org/iccc/ict-gov.php" target="_blank">Smart Cities Standards </a></li> 
+												<li><a href="https://smartnet.niua.org/tenders" target="_blank">Tenders </a></li> 
+												<li><a href="https://iccc.smartcities.gov.in/advisory-23-security-and-safety-through-icccs.pdf" target="_blank">Advisory 23 - Safety & Security through ICCCs </a></li>
+								<li><a href="https://iccc.smartcities.gov.in/imaf" target="_blank">IMAF</a></li>
+
+								<li><a href="https://iccc.smartcities.gov.in/pdf/sakshya.pdf" target="_blank">Sakshya</a></li> 
+								<li><a href="https://iccc.smartcities.gov.in/pdf/SmartProcureGuidelines.pdf" target="_blank">SmartProcure Guidelines</a></li> 
+								<li><a href="https://iccc.smartcities.gov.in/pdf/AI-Playbook-for-Cities.pdf" target="_blank">AI Playbook for Cities </a></li> 
+								<li><a href="https://iccc.smartcities.gov.in/pdf/AI-Use-Case-Compendium.pdf" target="_blank">AI Use Case Compendium </a></li> 
+								<li><a href="https://iccc.smartcities.gov.in/pdf/IUDX-Compendium-of-Use-Cases.pdf" target="_blank">IUDX - Compendium of Use Cases </a></li> 
+								<li><a href="https://iccc.smartcities.gov.in/pdf/DataSmart-Cities-Strategy.pdf" target="_blank">DataSmart Cities Strategy </a></li> 
+											 
+											</ul>
+										</li>
+										<li><a href="javascript:void(0)">Awards</a>
+											<ul class="child">
+												
+												<li><a href="https://iccc.smartcities.gov.in/awards" target="_blank">Awards Handbook </a></li>
+												<li><a href="https://iccc.smartcities.gov.in/admin/login?q=awards">Apply for Awards</a></li>
+											</ul>
+										</li>
+										 <li><a href="https://iccc.smartcities.gov.in/admin/login">City Login </a></li>
+
+
+									</ul>									
+								</div>
+								<!--DL Menu Start-->
+								<div id="kode-responsive-navigation" class="dl-menuwrapper">
+									<button class="dl-trigger">Open Menu</button>
+									<ul class="dl-menu">
+ 										<li><a class="active" href="https://iccc.smartcities.gov.in/iccc"><i class="fa fa-home"> </i></a></li>
+ 										<!--<li class="menu-item kode-parent-menu"><a href="#">Use Cases</a>
+											<ul class="dl-submenu">
+												<li><a href="https://iccc.smartcities.gov.in/iccc/cities">By City </a></li>
+												<li><a href="https://iccc.smartcities.gov.in/index.php#sectors">By Sector </a></li> 
+											</ul>
+										</li>-->
+										<li><a href="https://iccc.smartcities.gov.in/iccc/cities">Cities </a></li>
+										<li><a href="https://iccc.smartcities.gov.in/index.php#sectors">Sectors </a></li>
+ 
+
+										<li><a href="https://iccc.smartcities.gov.in/imaf" >IMAF</a></li>
+
+										
+										<li class="menu-item kode-parent-menu"><a href="#">Resources</a>
+											<ul class="dl-submenu">
+												<li><a href="https://smartnet.niua.org/iccc/ict.php" target="_blank">Model RFP </a></li>
+										<li><a href="https://smartnet.niua.org/iccc/ict-gov.php" target="_blank">Smart Cities Standards </a></li>
+										<li><a href="https://smartnet.niua.org/tenders" target="_blank">Tenders </a></li>  										
+										<li><a href="https://iccc.smartcities.gov.in/advisory-23-security-and-safety-through-icccs.pdf" target="_blank">Advisory 23 - Safety & Security through ICCCs </a></li> 
+										<li><a href="https://iccc.smartcities.gov.in/pdf/sakshya.pdf" target="_blank">Sakshya</a></li> 
+								<li><a href="https://iccc.smartcities.gov.in/imaf" target="_blank">IMAF</a></li>
+
+								<li><a href="https://iccc.smartcities.gov.in/pdf/SmartProcureGuidelines.pdf" target="_blank">SmartProcure Guidelines</a></li> 
+								<li><a href="https://iccc.smartcities.gov.in/pdf/AI-Playbook-for-Cities.pdf" target="_blank">AI Playbook for Cities </a></li> 
+								<li><a href="https://iccc.smartcities.gov.in/pdf/AI-Use-Case-Compendium.pdf" target="_blank">AI Use Case Compendium </a></li> 
+								<li><a href="https://iccc.smartcities.gov.in/pdf/IUDX-Compendium-of-Use-Cases.pdf" target="_blank">IUDX - Compendium of Use Cases </a></li> 
+								<li><a href="https://iccc.smartcities.gov.in/pdf/DataSmart-Cities-Strategy.pdf" target="_blank">DataSmart Cities Strategy </a></li> 
+									
+											</ul>
+										</li> 
+										
+										
+
+										<li><a href="javascript:void(0)">Awards</a>
+											<ul class="child">
+												<li><a href="https://iccc.smartcities.gov.in/awards" target="_blank">Awards Handbook </a></li>
+												<li><a href="https://iccc.smartcities.gov.in/admin/login?q=awards">Apply for Awards</a></li>
+											</ul>
+										</li>
+										
+										 <li><a href="https://iccc.smartcities.gov.in/admin/login">City Login </a></li>
+										 
+
+										
+										 
+									</ul>
+								</div>
+								<!--DL Menu END-->
+							</div>
+						 
+						</div>
+					</div>
+				</div>	
+				<!--CITY TOP NAVIGATION END-->
+
+       
+      </header><!--CITY MAIN BANNER START-->
+	
+	<!--CITY MAIN BANNER START-->
+	<div class="city_main_banner ">
+		<div class="main-banner-slider">
+			<div>
+				<figure class="overlay img-hover-zoom img-hover-zoom--brightness">
+					<img src="https://iccc.smartcities.gov.in/assets/frontend/extra-images/main-banner.jpg" alt="">
+					<div class="banner_text banner_text1">
+						 <div class="large_text animated"> Integrated   Command and  Control Centre (ICCC) </div>
+						 <div class="small_text animated " style="margin-bottom:20px;font-size: 22px;">Making Cities Safe, Livable and Sustainable</div>
+						<div class=" ">
+							 	<a class="theam_btn animated" target="_blank" href="https://iccc.smartcities.gov.in/iccc/cities">Explore Now</a>
+						</div>
+						 
+					</div>
+				</figure>
+			</div>
+			 
+			
+			</div>
+
+		</div>
+	</div>
+	<!--CITY MAIN BANNER END-->
+	
+
+	
+	<!--CITY ABOUT WRAP START-->
+	<div class="city_about_wrap">
+		<div class="container">
+			<div class="row">
+				 
+				<div class="col-md-12">
+					<div class="city_about_list">
+						<!--SECTION HEADING START-->
+						<div class="section_heading border">
+						 <h2>ICCC empowering Cities </h2>
+						</div>
+						<!--SECTION HEADING END-->
+						<div class="city_about_text">
+							<h6>The heralded rise of “Smart Cities” has pervaded in bringing data-centric solutions to urban challenges. The use of Integrated Command and Control Centers have been encouraged to improvise urban challenges and improvise the municipal service delivery. They are envisaged to be the hub of innovation as they facilitates effective management of city operations, exceptional scenarios and disaster mitigation using information and communication technologies. They enables cities with a decision support system for enhancing quality of life for its citizen. They also help cities achieve more with less using real-time data, centralized monitoring and informed decision making which is driving cities towards inclusion, efficiency, and innovation.
+
+
+</h6>
+							 
+                            
+						</div>
+						 
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--CITY ABOUT WRAP END-->
+	 
+	
+ <div class="city_services2_wrap">
+		<div class="container">
+		 
+			<div class="row">
+				<div class="col-md-4 col-sm-6">
+					<div class="city_service2_fig">
+						<figure class=" ">
+							<img src="https://iccc.smartcities.gov.in/assets/frontend/extra-images/service-fig.jpg" alt="">
+							<div class="city_service2_list">
+								<span style="background: none;"><img src="https://iccc.smartcities.gov.in/assets/frontend/extra-images/cities.png"></span>
+								<div class="city_service2_caption">
+									<h4><span>100</span></h4>
+								</div>
+							</div>
+						</figure>
+						<div class="city_service2_text">
+							
+							<a class="see_more_btn"  target="_blank" href="https://iccc.smartcities.gov.in/iccc/cities">Cities </a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6">
+					<div class="city_service2_fig">
+						<figure class=" ">
+							<img src="https://iccc.smartcities.gov.in/assets/frontend/extra-images/service-fig.jpg" alt="">
+							<div class="city_service2_list">
+								<span style="background: none;"><img src="https://iccc.smartcities.gov.in/assets/frontend/extra-images/usecase.png"></span>
+								<div class="city_service2_caption">
+									<h4><span>426</span></h4>
+								</div>
+							</div>
+						</figure>
+						<div class="city_service2_text">
+							
+							<a class="see_more_btn"  target="_blank" href="https://iccc.smartcities.gov.in/index.php#sectors">Use Cases </a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6">
+					<div class="city_service2_fig">
+						<figure class=" ">
+							<img src="https://iccc.smartcities.gov.in/assets/frontend/extra-images/service-fig.jpg" alt="">
+							<div class="city_service2_list">
+								<span style="background: none;"><img src="https://iccc.smartcities.gov.in/assets/frontend/extra-images/sectors.png"></span>
+								<div class="city_service2_caption">
+									<h4><span>12</span></h4>
+								</div>
+							</div>
+						</figure>
+						<div class="city_service2_text">
+							
+							<a class="see_more_btn"  target="_blank" href="https://iccc.smartcities.gov.in/index.php#sectors">Sectors  </a>
+						</div>
+					</div>
+				</div>
+				
+				
+				
+				
+				
+				
+				
+			</div>
+		</div>	
+	</div>
+
+	 	<!-- CITY SERVICES2 WRAP START-->
+	<div id="sectors" class="city_service_detail_wrap" style="background: url(https://iccc.smartcities.gov.in/assets/frontend/extra-images/bg-s.jpg);">
+		<div class="container">
+        	
+			<div class="row">
+             
+	
+				
+                
+				<div class="col-md-12">
+					<div class="tabs">
+						<div class="tab-content">
+                        <div id="tab1" class="tab active">
+                        <div class="section_heading center">
+				 <h2 style="color:#fff;">Smart Solutions for Urban Sectors</h2>
+			</div>
+           <div class="city_emergency_slider">
+          <div class="city-emergency-slide1">
+          
+          <div>
+            <div class="city_emergency_slide_fig text-center">
+            	<a  target="_blank" href="https://iccc.smartcities.gov.in/iccc/sector/use-case/28c8edde3d61a0411511d3b1866f0636">
+	                <img src="https://iccc.smartcities.gov.in/uploads/sector/1646211991_disaster.png" alt="">
+	                <h5>Disaster Management</h5>
+                </a>
+            </div>
+          </div>
+          
+          <div>
+            <div class="city_emergency_slide_fig text-center">
+            	<a  target="_blank" href="https://iccc.smartcities.gov.in/iccc/sector/use-case/665f644e43731ff9db3d341da5c827e1">
+	                <img src="https://iccc.smartcities.gov.in/uploads/sector/1646211978_education.png" alt="">
+	                <h5>Education</h5>
+                </a>
+            </div>
+          </div>
+          
+          <div>
+            <div class="city_emergency_slide_fig text-center">
+            	<a  target="_blank" href="https://iccc.smartcities.gov.in/iccc/sector/use-case/38026ed22fc1a91d92b5d2ef93540f20">
+	                <img src="https://iccc.smartcities.gov.in/uploads/sector/1646211964_e_governance.png" alt="">
+	                <h5>e-Governance</h5>
+                </a>
+            </div>
+          </div>
+          
+          <div>
+            <div class="city_emergency_slide_fig text-center">
+            	<a  target="_blank" href="https://iccc.smartcities.gov.in/iccc/sector/use-case/011ecee7d295c066ae68d4396215c3d0">
+	                <img src="https://iccc.smartcities.gov.in/uploads/sector/1646211954_energy.png" alt="">
+	                <h5>Energy</h5>
+                </a>
+            </div>
+          </div>
+          
+          <div>
+            <div class="city_emergency_slide_fig text-center">
+            	<a  target="_blank" href="https://iccc.smartcities.gov.in/iccc/sector/use-case/4e44f1ac85cd60e3caa56bfd4afb675e">
+	                <img src="https://iccc.smartcities.gov.in/uploads/sector/1661148349_1646211942_environment.png" alt="">
+	                <h5>Environment</h5>
+                </a>
+            </div>
+          </div>
+          
+          <div>
+            <div class="city_emergency_slide_fig text-center">
+            	<a  target="_blank" href="https://iccc.smartcities.gov.in/iccc/sector/use-case/3d2f8900f2e49c02b481c2f717aa9020">
+	                <img src="https://iccc.smartcities.gov.in/uploads/sector/1646211931_public.png" alt="">
+	                <h5>Public Awareness & Communication</h5>
+                </a>
+            </div>
+          </div>
+          
+          <div>
+            <div class="city_emergency_slide_fig text-center">
+            	<a  target="_blank" href="https://iccc.smartcities.gov.in/iccc/sector/use-case/cd7fd1517e323f26c6f1b0b6b96e3b3d">
+	                <img src="https://iccc.smartcities.gov.in/uploads/sector/1646211919_health.png" alt="">
+	                <h5>Health</h5>
+                </a>
+            </div>
+          </div>
+          
+          <div>
+            <div class="city_emergency_slide_fig text-center">
+            	<a  target="_blank" href="https://iccc.smartcities.gov.in/iccc/sector/use-case/815e6212def15fe76ed27cec7a393d59">
+	                <img src="https://iccc.smartcities.gov.in/uploads/sector/1646211905_mobility.png" alt="">
+	                <h5>Mobility</h5>
+                </a>
+            </div>
+          </div>
+          
+          <div>
+            <div class="city_emergency_slide_fig text-center">
+            	<a  target="_blank" href="https://iccc.smartcities.gov.in/iccc/sector/use-case/4c0d13d3ad6cc317017872e51d01b238">
+	                <img src="https://iccc.smartcities.gov.in/uploads/sector/1646211885_municipal_finance.png" alt="">
+	                <h5>Municipal Finance</h5>
+                </a>
+            </div>
+          </div>
+          
+          <div>
+            <div class="city_emergency_slide_fig text-center">
+            	<a  target="_blank" href="https://iccc.smartcities.gov.in/iccc/sector/use-case/8d8e353b98d5191d5ceea1aa3eb05d43">
+	                <img src="https://iccc.smartcities.gov.in/uploads/sector/1646211873_safety.png" alt="">
+	                <h5>Safety & Security</h5>
+                </a>
+            </div>
+          </div>
+          
+          <div>
+            <div class="city_emergency_slide_fig text-center">
+            	<a  target="_blank" href="https://iccc.smartcities.gov.in/iccc/sector/use-case/7bfc85c0d74ff05806e0b5a0fa0c1df1">
+	                <img src="https://iccc.smartcities.gov.in/uploads/sector/1646211860_water.png" alt="">
+	                <h5>Water Sanitation & Hygiene (WASH)</h5>
+                </a>
+            </div>
+          </div>
+          
+          <div>
+            <div class="city_emergency_slide_fig text-center">
+            	<a  target="_blank" href="https://iccc.smartcities.gov.in/iccc/sector/use-case/7e51746feafa7f2621f71943da8f603c">
+	                <img src="https://iccc.smartcities.gov.in/uploads/sector/1646211835_others.png" alt="">
+	                <h5>Others</h5>
+                </a>
+            </div>
+          </div>
+          
+
+          
+
+        </div>
+      </div>
+								
+							</div>
+							
+							
+							
+							 
+						</div>
+					</div>
+					
+				 
+				</div>
+			</div>	
+		</div>		
+	</div>			
+	 
+	 <!-- New Section Start -->
+	 
+	
+
+<div class="city_about_wrap" style="background: url(https://iccc.smartcities.gov.in/assets/frontend/extra-images/bg3.jpg); background-size: 100%;"  >
+		<div class="container">
+			<div class=" text-center">
+				 <h2 class="text-white mb-0">ICCC Strengthening Digital Infrastructure</h2>
+			</div>
+		
+			
+		</div>
+	</div> 
+
+<!--<div class="city_about_wrap" style="margin-bottom: 80px;">
+		<div class="container">
+		 
+			<div class="row align-item-center justify-content-center">
+				<div class="col-md-6 col-sm-12 text-center">
+					<a class="read2"><img src="https://iccc.smartcities.gov.in/assets/frontend/extra-images/IMAF.png" width="350"  class="border-img" alt=""></a>
+				</div>
+				<div class="col-md-6 col-sm-12">
+					<div class="city_about_list">
+						 
+						<div class="section_heading border">
+							 <h2>ICCC Maturity Assesment Framework (IMAF) 1.0</h2>
+						</div>
+						 
+						<div class="city_about_text">
+							<h6>Benchmarking & Measurement</h6>
+							<a target="_blank" class="theam_btn border-color color" href="https://smartnet.niua.org/iccc/imaf.php">Read More</a>
+							 
+						</div>
+						 
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div> -->
+
+<div class="city_about_wrap" style="margin-bottom: 80px;">
+		<div class="container">
+		 
+			<div class="row align-item-center justify-content-center">
+				<div class="col-md-6 col-sm-12 text-center">
+					<a class="read"><img src="https://iccc.smartcities.gov.in/assets/frontend/awards/imaf-2.jpg" width="350"  class="border-img" alt=""></a>
+				</div>
+				<div class="col-md-6 col-sm-12">
+					<div class="city_about_list">
+						 
+						<div class="section_heading border">
+							 <h2>ICCC Maturity Assessment Framework (IMAF) 2.0</h2>
+						</div>
+						 
+						<div class="city_about_text">
+							<h6>Benchmarking & Measurement</h6>
+							<a target="_blank" class="theam_btn border-color color read"  >Read More</a>
+							 
+						</div>
+						 
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div> 
+
+
+
+<div class="city_about_wrap" style="background: url(https://iccc.smartcities.gov.in/assets/frontend/extra-images/bg3.jpg); background-size: 100%;">
+		<div class="container">
+			<div class="row align-item-center justify-content-center">
+			
+				<div class="col-md-6 col-sm-12">
+					<div class="city_about_list" style="padding-left: 90px;">
+						<!--SECTION HEADING START-->
+						<div class="section_heading border">
+							 <h2 class="text-white">ICCC / ICT Model RFP 2.0</h2>
+						</div>
+						<!--SECTION HEADING END-->
+						<div class="city_about_text">
+							<h6  class="text-white" >Requirement & Guidelines</h6>
+							<a target="_blank" class="theam_btn border-color border-color-white text-white" href="https://smartnet.niua.org/iccc/ict.php">Read More</a>
+							 
+						</div>
+						 
+					</div>
+				</div>
+					<div class="col-md-6 col-sm-12 text-center">
+					<a target="_blank" href="https://smartnet.niua.org/iccc/ict.php" ><img src="https://iccc.smartcities.gov.in/assets/frontend/extra-images/rfp.png" width="350" class="border-img" alt=""></a>
+				</div>
+			</div>
+			
+		</div>
+	</div> 
+
+<div class="city_about_wrap" style="margin-bottom:100px;">
+		<div class="container">
+				
+			<div class="row align-item-center justify-content-center">
+				<div class="col-md-6 col-sm-12 text-center">
+					<a target="_blank" href="https://smartnet.niua.org/iccc/ict-gov.php"> <img src="https://iccc.smartcities.gov.in/assets/frontend/extra-images/scs.png" width="350" class="border-img" alt=""></a>
+						 
+				</div>
+				<div class="col-md-6 col-sm-12"> 
+					<div class="city_about_list">
+						<!--SECTION HEADING START-->
+						<div class="section_heading border">
+							 <h2>Smart Cities Standard</h2>
+						</div>
+						<!--SECTION HEADING END-->
+						<div class="city_about_text">
+							<h6>Blueprint and Specification</h6>
+							<a target="_blank" class="theam_btn border-color color" href="https://smartnet.niua.org/iccc/ict-gov.php">Read More</a>
+							 
+						</div>
+						 
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div> 
+	
+	
+
+	
+
+ 
+</div>
+ <!--WRAPPER END-->
+  <footer>
+        <div class="widget_wrap ">
+          <div class="container">
+            <div class="row">
+              <div class="widget_copyright">
+               
+                <div class="col-md-4">
+                  <div class="copyright_text">
+                    <p>
+                      <span>Copyright © 2023 ICCC .</span> Designed and Developed by NIC
+                    </p>
+                  </div>
+                </div>
+                 <div class="col-md-4 col-sm-6 text-center">
+                  <div class="widget_logo">
+                    <a href="#">
+                      <img src="https://iccc.smartcities.gov.in/assets/frontend/extra-images/mohua.svg" width="250" style="filter: brightness(0) invert(1);" alt="">
+                    </a>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                  <div class="city_top_social">
+                    <ul>
+                      <li>
+                        <a href="#">
+                          <i class="fa fa-facebook"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i class="fa fa-twitter"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i class="fa fa-linkedin"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i class="fa fa-youtube"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i class="fa fa-google"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    
+ 
+<!--<script src="https://iccc.smartcities.gov.in/assets/frontend/js/jquery.mindbf6.js?v=643c1"></script>-->
+<script src="https://iccc.smartcities.gov.in/assets/frontend/js/script8494.js?v=b8943"></script>
+<!--Jquery Library-->
+<!--<script src="https://iccc.smartcities.gov.in/assets/frontend/js/jquery.js"></script>-->
+<!--Bootstrap core JavaScript-->
+<script src="https://iccc.smartcities.gov.in/assets/frontend/js/bootstrap.js"></script>
+<!--Slick Slider JavaScript-->
+<script src="https://iccc.smartcities.gov.in/assets/frontend/js/slick.min.js"></script>
+<!--Pretty Photo JavaScript-->
+<script src="https://iccc.smartcities.gov.in/assets/frontend/js/jquery.prettyPhoto.js"></script>
+	<!--Image Filterable JavaScript-->
+<script src="https://iccc.smartcities.gov.in/assets/frontend/js/jquery-filterable.js"></script>
+<!--Pretty Photo JavaScript-->	
+<script src="https://iccc.smartcities.gov.in/assets/frontend/js/jquery.bxslider.min.js"></script>
+<!--Pretty Photo JavaScript-->
+<script src="https://iccc.smartcities.gov.in/assets/frontend/js/index.js"></script>
+<!--Pretty Photo JavaScript-->
+<script src="https://iccc.smartcities.gov.in/assets/frontend/js/modernizr.custom.js"></script>
+<!--Pretty Photo JavaScript-->
+<script src="https://iccc.smartcities.gov.in/assets/frontend/js/jquery.dlmenu.js"></script>
+<!--Pretty Photo JavaScript-->
+<script src="https://iccc.smartcities.gov.in/assets/frontend/js/downCount.js"></script>
+<!--Counter up JavaScript-->
+<script src="https://iccc.smartcities.gov.in/assets/frontend/js/waypoints.js"></script>
+<!--Pretty Photo JavaScript-->
+<script src="https://iccc.smartcities.gov.in/assets/frontend/js/waypoints-sticky.js"></script>
+
+<!--Custom JavaScript-->
+<script src="https://iccc.smartcities.gov.in/assets/frontend/js/custom.js"></script>
+<script>document.documentElement.className = 'js';</script>
+</body>
+
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/2676538428.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="./script.js">
+    
+    </script>
+</head>
+<body>
+    <!-- navbar -->
+    <div class="header container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <img class="brand-img" src="logo.png" width="" alt="">
+            <a class="navbar-brand" href="index.html"><h1>Smart City Mission</h1></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="./index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./services.html">Aim and Action Plan</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#cont-id">Contact Us</a>
+                </li>
+            </ul>
+            </div>
+        </nav>
+    </div>
+    
+
+
+    <div class="container-fluid body">
+    <div class="row">
+        <div class="col-lg-8 left">
+          <div id="testimonial-carousel" class="carousel slide" data-ride="false" keyboard="true" >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="cimg" src="data:image/jpeg;base64,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" alt="">
+              </div>
+              <div class="carousel-item">
+                <img class="cimg" src="data:image/png;base64,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" alt="">
+              </div>
+              <div class="carousel-item">
+                <img class="cimg" src="https://www.squareyards.com/cdn-cgi/image/quality=70,fit=crop,gravity=auto,format=webp/https://www.squareyards.com/blog/wp-content/uploads/2022/11/Location-of-100-cities-selected-under-the-Smart-Cities-Mission-Source-Author.png">
+              </div>
+            <a class="carousel-control-prev" href="#testimonial-carousel" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#testimonial-carousel" role="button" data-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </a>
+            </div>
+          </div>
+            
+              <div>
+                <h2>What is Smart City ?</h2>
+                <p>
+                  <li>A Smart City is-
+                    <ul>
+                          <li>An urban system</li>
+                          <li>Uses Information & Communication Technology (ICT)</li>
+                          <li>Makes infrastructure more interactive, accessible and efficient.</li> 
+                    </ul>  
+                  </li>
+                  <li>
+                  Need for Smart City arose due to-
+                  <ul>
+                         <li> Rapidly growing urban population</li>
+                         <li> Fast depleting natural resources</li>
+                          <li>Changes in environment and climate</li>
+                          </ul>
+                          </li>   
+                        </ul>
+                </p>
+              </div>
+              
+
+              <div class="row about">
+                <div class="col-lg-12">
+                    
+                </div>
+                <div class="col-lg-4">
+                <div class="card card-about-us">
+                  <div class="card-body about-img">
+                    <img class="about-image" src="report.png" class="simg" alt="s1">
+                    
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-8">
+                <div class="card card-about-us">
+                  <div class="card-body">                
+                    <div class="ohidden" id="oh">
+                      A smart city is a technologically advanced urban environment that utilizes data-driven solutions to enhance residents' quality of life, optimize urban operations, and address diverse challenges. The term "smart city" denotes the integration of Information and Communication Technologies (ICT), data analytics, and cutting-edge technologies to efficiently manage key city functions such as transportation, energy, healthcare, education, and public safety.
+
+                      Key characteristics include the integration of advanced technologies like sensors, data analytics, artificial intelligence, and the Internet of Things (IoT) to collect and analyze data from various sources. This data-driven approach enables informed decision-making by city officials, optimizing resource allocation and enhancing urban planning.
+                      
+                      Smart cities prioritize the development of efficient and sustainable urban infrastructure, including intelligent transportation systems, energy-efficient buildings, and innovative waste management solutions. Sustainability is emphasized through the incorporation of renewable energy sources and eco-friendly transportation methods.
+                      
+                      The overarching goal is to improve residents' quality of life by providing better access to services, efficient public transportation, enhanced safety measures, and increased citizen engagement through technology. Citizen engagement is facilitated through digital platforms, mobile apps, and other technologies that enable feedback and participation in decision-making processes.
+                      
+                      Smart cities foster innovation and collaboration between public and private sectors, academia, and the community. This collaborative approach contributes to the development and implementation of cutting-edge solutions to urban challenges.
+                      
+                      Connectivity is fundamental, encompassing widespread access to high-speed internet, integrated communication networks, and a connected ecosystem enabling seamless interactions between devices and systems.
+                      
+                      Examples of smart city initiatives include intelligent traffic management systems, smart grids for efficient energy distribution, environmental monitoring through sensors, and the use of technology to enhance public safety and emergency response. The dynamic nature of smart cities continually evolves as technology advances, adapting to the unique challenges and priorities of each urban area.
+                                        <img src="Pasted image 20231114124435.png" width="500px"> </div>
+                    <div class="btn-div">
+                    <button type="button" onclick="return over()" id="btn-rm" class="btn btn-sm btn-outline-success">Read More</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </div>
+
+              
+        </div>
+        <div class="col-lg-4 right">
+            <div class="row">
+                <div class="col-lg-12 l1">
+                    <h3 style="margin-bottom: 5%;">Enquiry Form</h3>
+                    <form action="mailto:xyz@abc.com" name="myform" enctype="text/plain" method="post" onsubmit="return validate()">
+                      <div class="form-group input-control">
+                        <label for="exampleFormControlInput1">Name</label>
+                        <input name="Name" type="text" class="form-control name-input" id="exampleFormControlInput1" placeholder="Enter your name...">
+                        <div class="error-box" id="name-error"></div>
+                      </div>
+                        <div class="form-group input-control">
+                          <label for="exampleFormControlInput1">Email</label>
+                          <input name="Email" type="text" class="form-control email-input" id="exampleFormControlInput1" placeholder="name@example.com">
+                          <div class="error-box" id="email-error"></div>
+                        </div>
+                        <div class="form-group input-control">
+                          <label for="exampleFormControlInput1">Mobile No.</label>
+                          <input name="Mobile" oninput="restrictToNumbers(event)" type="text" class="form-control mob-input" id="exampleFormControlInput1" placeholder="Enter Mobile No...">
+                          <div class="error-box"  id="mob-error"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                          <label for="exampleFormControlSelect1">Select Service</label>
+                          <select required name="Service" class="form-control" id="exampleFormControlSelect1">
+                            <option checked>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                          </select>
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleFormControlTextarea1">Message</label>
+                          <textarea placeholder="Enter your message...." name="Message" class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-md btn-outline-success">Submit</button>
+                      </form>
+                </div>
+                <div class="col-lg-12 l2">
+                  <div class="container">
+                    <h4>Focus Areas</h3>
+                    <div class="row serv">
+                      <div class="col-lg-4 lc">
+                        <img src="econamy.png" width=140px alt="">
+                      </div>
+                      <div class="col-lg-8 lc">
+                       <b> Smart Economy </b>:competitiveness<br>
+                       <b>Smart Living </b>: quality of life
+                      </div>
+                    </div>
+                    <div class="row serv">
+                      <div class="col-lg-4 lc">
+                        <img src="governance.png" width="140px" alt="">
+                      </div>
+                      <div class="col-lg-8 lc">
+                        <b>Smart Governance </b>: citizen participation in different things ; in a normal city there is close to no interconnection b/w these but in a smart city these are
+                        interconnected by ICT 
+                      </div>
+                    </div>
+                    <div class="row serv">
+                      <div class="col-lg-4 lc">
+                        <img src="people.png" width=140px alt="">
+                      </div>
+                      <div class="col-lg-8 lc">
+                        <b>Smart People</b> : social and human capital ; education , healthcare and population are the core of a city and others are peripherals
+                        in a smart city citizens are connected to these services and these are inter connected with
+                        each other and how there perform well we have to identify them by ICT
+                      </div>
+                    </div>
+                    <div class="row serv">
+                      <div class="col-lg-4 lc">
+                        <img src="mobility.png" width="140px" alt="">
+                      </div>
+                      <div class="col-lg-8 lc">
+                        <b>Smart Mobility</b>: ICT and transport <br>
+                        <b>Smart Enviroment</b>: better use of natural resources
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12 footer">
+            <div class="row">
+                <div class="col-lg-4 f1">
+                    <h5><u>ADDRESS</u></h5>
+                    Economic Advisor (WIM), Ministry of Housing And Urban Affairs, Government of India, Room No : 232-C Nirman Bhawan , New Delhi
+                  </div>
+                <div class="col-lg-4 f2">
+                    <h5><u>Quick Links</u></h5>
+                    <hr>
+                    <p><a href="index.html">home</a></p>
+                    <p><a href="map.png">Map</a></p>
+                    <p><a href="https://smartcities.gov.in/">smart city mission</a></p>
+                    
+                </div>
+                <div class="col-lg-4 f3" id="cont-id">
+                    <h5><u>Contact Details of Ministry of Housing and Urban Affairs</u></h5>
+                    <pre>
+Phone No: 23061397
+Fax: 23062170
+                    </pre>
+                    <p><b>E-Mail</b> : <a href="mailto:dinesh.kapila@gov.in">dinesh.kapila@gov.in</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+</html>

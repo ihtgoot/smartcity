@@ -1,0 +1,172 @@
+.header
+{
+    padding: 0;
+    box-shadow: 0 0.25rem 1rem grey ;
+    margin-bottom: 40px;
+}
+.brand-img
+{
+    width: 10%;
+    margin-right: 2%;
+}
+.navbar
+{
+    font-size: 1.5rem;
+    background-color:white ;
+}
+.nav-item
+{
+    padding: 0 2rem;
+}
+.left,.right
+{
+    padding: 2%;
+}
+
+.card-header
+{
+    text-align: center;
+}
+.card-service
+{
+    margin-top: 2%;
+    text-align: justify;
+}
+.service-image
+{
+    width:4rem;
+    height: 4rem;
+}
+#carousel-container
+{
+    border-radius: 2;
+}
+.carousel-item
+{
+    height: 100%;
+    width: 100%;
+}
+.cimg
+{
+    height: 100%;
+    width: 100%;
+}
+.carousel-inner
+{
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgb(113, 113, 113);
+    height: 30rem;
+}
+.card-box-service
+{
+    height: 300px;
+    overflow-y: hidden;
+}
+.about
+{
+    margin-top: 2%;
+}
+.about-us
+{
+    margin-top: 2%;
+}
+.card-about-us
+{
+    height:22.1rem;
+}
+.about-img
+{
+    text-align: center;
+    padding: 2%
+}
+.about-image
+{
+    height: 100%;
+    width: 100%;
+}
+.btn
+{
+    margin-top: 5px;
+    padding: 1%;
+}
+.ohidden
+{
+    height: 85%;
+    overflow: hidden;
+    text-align: justify;    
+}
+.card-about-us>.card-body
+{
+    overflow: hidden;
+}
+.footer
+{
+    border: 1px solid rgba(154, 154, 154, 0.468);
+    padding: 1%;
+    margin-top: 2%;
+    
+}
+.f1,.f2
+{
+    border-right: 1px solid rgba(155, 155, 155, 0.493);
+    height: 200px;
+    line-height: 100%;
+    text-align: center;
+}
+.f3
+{
+    text-align: center;
+}
+h5
+{
+text-align: center;
+}
+.ficon
+{
+    margin: 2.5% 2.5%;
+}
+.l1,.l2
+{
+    border: 1px solid rgba(156, 156, 156, 0.404);
+    border-radius: 5px;
+    max-height: fit-content;
+    padding: 2%;
+}
+.l1
+{
+    line-height: 25%;
+}
+.l2
+{
+    margin-top: 2%;
+    height: 44rem;
+    padding: 2%;
+}
+.lc
+{
+    height: 9.5rem;
+    padding: 2%;
+    text-align: justify;
+    overflow: hidden;
+
+}
+.l2 img
+{
+    height:100%;
+    border: 1px solid rgba(150, 150, 150, 0.479);
+    border-radius: 5px;
+}
+@media(max-width : 1028px)
+{
+    .l2
+    {
+        overflow-y: scroll;
+    }
+}
+.error-box
+{
+    color: red;
+    font-size: smaller;
+    padding: 2%;
+    margin: 0;
+}
